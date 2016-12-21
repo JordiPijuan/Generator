@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <GeneratorObjects>
+		<GeneratorConnections>
+			<GeneratorConnection id="1" enabled="false" provider="System.Data.SqlClient" >
+				<ConectionChain connectionString="Data Source={0};Initial Catalog={1};Integrated Security=True;Connect Timeout={2};" />
+				<ConnectionOptions server="SRV-SQL2K8" database="Digital.Permit.TEST" user="" password="" timeout="30" />
+			</GeneratorConnection>
+			<GeneratorConnection id="2" enabled="true" provider="System.Data.SqlClient" >
+				<ConectionChain connectionString="Data Source={0};Initial Catalog={1};Integrated Security=True;Connect Timeout={2};" />
+				<ConnectionOptions server="ASUS-PC\REDSOL2" database="Climbing.Schools.Info.Fluent" user="" password="" timeout="30" />
+			</GeneratorConnection>
+		</GeneratorConnections>
+		<Namespaces name="Objects.JP" languaje="1" >
+			<Namespace id="1" name="Objects.JP.Entities" type="Entities" destinyPath="{0}\Objects\{1}.{2}.{3}" enabled="true" >
+				<GeneratorOptions blankLinesBetweenMembers="true" >
+					<ClassEntity id="1" partial="false" sealed="false" isEnum="false" fieldsEnum="true" withMetadata="true" addConstructorWithParameters="true" >
+						<Constructor id="1" startRegion="· Constructors" />
+						<ClassMetadata id="1" sufix="{0}MetaData">
+							<Attributes>
+								<Attribute id="1" type="PrimaryKey" name="Required" value="" messageProperty="" />
+								<Attribute id="2" type="Field" name="Description" value="The {0} field." messageProperty="" />
+							</Attributes>
+						</ClassMetadata>
+						<Enumerations id="1" enumAttribute="Description" endEnums="{0}Fields" addAttribute="false" message="The field {0} to table {1}" />
+					</ClassEntity>
+					<PrivateProperties id="1" startRegion="· Private properties" endRegion="" prefixPrivateFields="_{0}" />
+					<PublicProperties id="1" startRegion="· Public properties" endRegion="" hasGet="true" hasSet="true" >
+						<Attributes>
+							<Attribute id="1" type="PrimaryKey" name="Required" value="" messageProperty="" />
+							<Attribute id="2" type="Field" name="Description" value="" messageProperty="The {0} of the object." />
+							</Attributes>
+					</PublicProperties>
+					<PublicMethods>
+						<PublicMethod id="1" name="Add" returnType="T" >
+							<ExceptionMethod typeException="NotImplementedException" message="aa" />
+							<Parameters>
+								<Parameter id="1" name="" type="" />
+								<Parameter id="2" name="" type="" />
+							</Parameters>
+							<Statements>
+								<Statement id="1" name="aa" comment="" />
+								<Statement id="2" name="aa" />
+							</Statements>
+						</PublicMethod>
+						<PublicMethod id="2" name="GetAll" returnType="IEnumerable&lt;T&gt;" >
+							<ExceptionMethod typeException="NotImplementedException" message="aa" />
+							<Parameters>
+								<Parameter id="1" name="" type="" />
+								<Parameter id="2" name="" type="" />
+							</Parameters>
+							<Statements>
+								<Statement id="1" name="aa" comment="" />
+							</Statements>
+						</PublicMethod>
+					</PublicMethods>
+					<PrivateMethods>
+						<PrivateMethod id="1" name="Add" returnType="T" >
+							<ExceptionMethod typeException="NotImplementedException" message="aa" />
+							<Parameters>
+								<Parameter id="1" name="" type="" />
+								<Parameter id="2" name="" type="" />
+							</Parameters>
+							<Statements>
+								<Statement id="1" name="aa" comment="" />
+								<Statement id="2" name="aa" />
+							</Statements>
+						</PrivateMethod>
+						<PrivateMethod id="2" name="GetAll" returnType="IEnumerable&lt;T&gt;" >
+							<ExceptionMethod typeException="NotImplementedException" message="aa" />
+							<Parameters>
+								<Parameter id="1" name="" type="" />
+								<Parameter id="2" name="" type="" />
+							</Parameters>
+							<Statements>
+								<Statement id="1" name="aa" comment="" />
+									<Statement id="2" name="aa" />
+							</Statements>
+						</PrivateMethod>
+					</PrivateMethods>
+				</GeneratorOptions>
+				<Imports>
+					<Import id="1" name="System" />
+					<Import id="2" name="System.Collection.Generic" />
+				</Imports>
+			</Namespace>
+
+        <Namespace id="2" name="Objects.JP.Entities" type="Entities" destinyPath="{0}\Objects\{1}.{2}.{3}" enabled="true" >
+          <GeneratorOptions blankLinesBetweenMembers="true" >
+            <ClassEntity id="1" partial="false" sealed="false" isEnum="false" fieldsEnum="true" withMetadata="true" addConstructorWithParameters="true" />
+	    <PublicMethods>
+	      <PublicMethod id="1" name="Add" returnType="T" >
+		<ExceptionMethod typeException="NotImplementedException" message="aa" />
+		<Statements>
+		  <Statement id="1" name="aa" comment="" />
+		  <Statement id="2" name="aa" />
+		</Statements>
+	      </PublicMethod>
+	      <PublicMethod id="2" name="GetAll" returnType="IEnumerable&lt;T&gt;" >
+		<ExceptionMethod typeException="NotImplementedException" message="aa" />
+		<Statements>
+		  <Statement id="1" name="aa" comment="" />
+		</Statements>
+	      </PublicMethod>
+	    </PublicMethods>
+	    <PrivateMethods>
+	      <PrivateMethod id="1" name="Add" returnType="T" >
+		<ExceptionMethod typeException="NotImplementedException" message="aa" />
+		<Statements>
+		  <Statement id="1" name="aa" comment="" />
+		  <Statement id="2" name="aa" />
+		</Statements>
+	      </PrivateMethod>
+	      <PrivateMethod id="2" name="GetAll" returnType="IEnumerable&lt;T&gt;" >
+		<ExceptionMethod typeException="NotImplementedException" message="aa" />
+		<Statements>
+		  <Statement id="1" name="aa" comment="" />
+		  <Statement id="2" name="aa" />
+		</Statements>
+	      </PrivateMethod>
+	    </PrivateMethods>
+          </GeneratorOptions>
+          <Imports>
+            <Import id="1" name="System" />
+            <Import id="2" name="System.Collection.Generic" />
+          </Imports>
+        </Namespace>
+      </Namespaces>
+    </GeneratorObjects> 
