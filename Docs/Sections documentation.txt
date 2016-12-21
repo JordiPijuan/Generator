@@ -1,0 +1,236 @@
+﻿**********************************************************************************************
+**********************************************************************************************
+
+										web.config
+										
+**********************************************************************************************
+**********************************************************************************************
+
+<Namespace id="1" name="Objects.JP.Entities" type="Entity" destinyPath="{0}\Objects\{1}.{2}" enabled="true">
+	<GeneratorOptions blankLinesBetweenMembers="false" withImplementation="false">
+	  <ClassEntity id="1" partial="false" sealed="false" isEnum="false" fieldsEnum="true" withMetadata="true" addConstructorWithParameters="true">
+		<Constructor id="1" startRegion="· Constructors" />
+		<ClassMetadata id="1" sufix="{0}MetaData">
+		  <Attributes>
+			<Attribute id="1" type="PrimaryKey" name="Required" enabled="true" value="" />
+			<Attribute id="2" type="Field" name="Description" enabled="true" value="The {0} field." />
+		  </Attributes>
+		</ClassMetadata>
+		<Enumerations id="1" enumAttribute="Description" endEnums="{0}Fields" addAttribute="true" message="The field {0} to table {1}" />
+	  </ClassEntity>
+	  <PrivateProperties id="1" startRegion="· Private properties" endRegion="" prefixPrivateFields="_{0}" />
+	  <PublicProperties id="1" startRegion="· Public properties" endRegion="" hasGet="true" hasSet="true">
+		<Attributes>
+		  <Attribute id="1" type="Field" name="Description" enabled="true" value="" messageProperty="The {0} class object." />
+		</Attributes>
+	  </PublicProperties>
+	  <PrivateMethods>
+		<PrivateMethod id="1" name="Add" enabled="true" returnType="">
+		  <ExceptionMethod typeException="NotImplementedException" />
+		  <Parameters>
+			<Parameter id="1" name="entity" enabled="true" type="T" />
+		  </Parameters>
+		  <Statements>
+			<Statement id="1" name="entity" enabled="true" type="string"/>
+		  </Statements>
+		</PrivateMethod>
+		<PrivateMethod id="2" name="GetAll" enabled="true" returnType="IEnumerable&lt;T&gt;">
+		  <ExceptionMethod typeException="NotImplementedException" />
+		</PrivateMethod>
+	  </PrivateMethods>
+	  <PublicMethods>
+		<PublicMethod id="1" name="Add" enabled="true" returnType="">
+		  <ExceptionMethod typeException="NotImplementedException" />
+		  <Parameters>
+			<Parameter id="1" name="entity" enabled="true" type="T" />
+		  </Parameters>
+		</PublicMethod>
+		<PublicMethod id="2" name="GetAll" enabled="true" returnType="IEnumerable&lt;T&gt;">
+		  <ExceptionMethod typeException="NotImplementedException" />
+		</PublicMethod>
+	  </PublicMethods>
+	</GeneratorOptions>
+	<Imports>
+	  <Import id="1" name="System" enabled="true" />
+	  <Import id="2" name="System.Collection.Generic" enabled="true" />
+	  <Import id="3" name="System.ComponentModel.DataAnnotations" enabled="true" />
+	</Imports>
+</Namespace>
+
+
+**********************************************************************************************
+**********************************************************************************************
+
+
+Namespace : Base
+----------------------------------------------------------------------------------------------
+id="1" 														=> Identity (key)
+name="Objects.JP.Entities"									=> Namespace
+type="Entity" 												=> Type object (
+																Entity, 
+																GenericRepositoryCollection, 
+																GenericRepository, 
+																GenericInterface
+																)
+destinyPath="{0}\Objects\{1}.{2}" 							=> Path destiny file
+enabled="true" 												=> Generate (true, false)
+
+	GeneratorOptions
+	------------------------------------------------------------------------------------------
+	blankLinesBetweenMembers="false"						=> Space between members 
+	withImplementation="false"								=> Implementing generic object
+
+		ClassEntity
+		--------------------------------------------------------------------------------------
+		id="1"												=> Identity (key)
+		partial="false"										=> Is partial (true, false)  
+		sealed="false"										=> Is sealed (true, false)   
+		isEnum="false"										=> Is enumeration (true, false) 
+		fieldsEnum="true" 									=> Add enumeration to fields
+		withMetadata="true"									=> Add partial class with DataAnnotations attributes 
+		addConstructorWithParameters="true"					=> Add new constructor with entry parameters
+		sufix												=> Add termination name
+		
+			Constructor
+			---------------------------------------------------------------------------------
+			id="1" 											=> Identity (key)
+			startRegion="· Constructors"					=> Header text of region directive
+			
+			ClassMetadata 
+			---------------------------------------------------------------------------------
+			id="1" 											=> Identity (key)
+			sufix="{0}MetaData"								=> Sufix of name to the object
+				
+				-----------------------------------------------------------------------------
+				Attributes [Collection]
+				-----------------------------------------------------------------------------
+					Attribute : Base 
+					-------------------------------------------------------------------------
+					id="1" 									=> Identity (key)
+					type="Field"							=> Attribute type (
+																PrimaryKey, 
+																ForeignKey, 
+																Field
+																) 
+					name="Description"						=> Attribute name 
+					enabled="true"							=> Generate (true, false) 
+					value="" 								=>
+					messageProperty="The {0} class object."	=> Attribute message text 
+					
+			Enumerations 
+			---------------------------------------------------------------------------------
+			id="1"											=> Identity (key) 
+			enumAttribute="Description"						=> attribute name 
+			endEnums="{0}Fields"							=> Sufix name 
+			addAttribute="true"								=> Generate (true, false) 
+			message="The field {0} to table {1}"			=> Attribute message text
+			
+		PrivateProperties 
+		--------------------------------------------------------------------------------------		
+		id="1"												=> Identity (key) 
+		startRegion="· Private properties" 					=> Header text of region directive
+		endRegion=""                                        => Footer text of region directive
+		prefixPrivateFields="_{0}"							=> Prefix of private properties
+			
+		PublicProperties 
+		--------------------------------------------------------------------------------------		
+		id="1" 												=> Identity (key)
+		startRegion="· Public properties"					=> Header text of region directive 
+		endRegion=""										=> Footer text of region directive 
+		hasGet="true"										=> Add get statement 
+		hasSet="true"										=> Add set statement	
+		
+			----------------------------------------------------------------------------------		
+			Attributes [Collection]
+			----------------------------------------------------------------------------------		
+				Attribute : Base
+				------------------------------------------------------------------------------		
+				id="1"										=> Identity (key) 
+				type="Field"								=> Attribute type (
+																	PrimaryKey, 
+																	ForeignKey, 
+																	Field
+																	) 
+				name="Description"							=> Attribute name 
+				enabled="true"								=> Generate (true, false) 
+				value=""									=> 
+				messageProperty="The {0} class object." 	=> Attribute message 
+						
+		--------------------------------------------------------------------------------------		
+		PrivateMethods [Collection]
+		--------------------------------------------------------------------------------------		
+			PrivateMethod : Base
+			----------------------------------------------------------------------------------
+			id="1" 											=> Identity (key)
+			name="GetAll"									=> Method name 
+			enabled="true"									=> Generate (true, false) 
+			returnType="IEnumerable&lt;T&gt;"				=> Method return type
+			
+				ExceptionMethod
+				------------------------------------------------------------------------------		
+				typeException="NotImplementedException"		=> Exception type
+				message=""									=> Exception message
+				
+				------------------------------------------------------------------------------		
+				Parameters [Collection]
+				------------------------------------------------------------------------------		
+					Parameters : Base
+					--------------------------------------------------------------------------
+					id="1"									=> Identity (key) 
+					name="entity"							=> Parameter name 
+					enabled="true"							=> Generate (true, false)  
+					type="T"								=> Parameter type 
+
+				------------------------------------------------------------------------------		
+				Statements [Collection]
+				------------------------------------------------------------------------------		
+					Statement : Base
+					--------------------------------------------------------------------------
+					id="1" 									=> Identity (key)
+					name="entity" 							=> Statement name
+					enabled="true"							=> Generate (true, false)  
+					type="T"								=> Statement type 					
+				
+		--------------------------------------------------------------------------------------		
+		PublicMethods [Collection]
+		--------------------------------------------------------------------------------------		
+			PublicMethod : Base
+			----------------------------------------------------------------------------------		
+			id="1" 											=> Identity (key)
+			name="GetAll"									=> Method name 
+			enabled="true"									=> Generate (true, false) 
+			returnType="IEnumerable&lt;T&gt;"				=> Method return type
+
+				ExceptionMethod
+				------------------------------------------------------------------------------		
+				typeException="NotImplementedException"		=> Exception type
+				message=""									=> Exception message
+				
+				Parameters [Collection]
+				------------------------------------------------------------------------------		
+					Parameters : Base
+					--------------------------------------------------------------------------
+					id="1"									=> Identity (key) 
+					name="entity"							=> Parameter name 
+					enabled="true"							=> Generate (true, false)  
+					type="T"								=> Parameter type 
+
+------------------------------------------------------------------------------		
+Statements [Collection]
+------------------------------------------------------------------------------		
+	Statement : Base
+------------------------------------------------------------------------------
+		id="1" 		=> Identity (key)
+		name="entity" 	=> Statement name
+		enabled="true"	=> Generate (true, false)  
+		type="T"	=> Statement type 					
+	
+------------------------------------------------------------------------------------------
+Imports [Collection]	
+------------------------------------------------------------------------------------------
+	Import : Base
+------------------------------------------------------------------------------------------		
+		id="1"		=> Identity (key) 
+		name="System"	=> Add using 
+		enabled="true"	=> Generate (true, false) 
+		

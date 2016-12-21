@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91DFDF89-089D-4E60-B6E8-817C578C2ACB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Objects.Generator.Core</RootNamespace>
+    <AssemblyName>Objects.Generator.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Collections\GeneratorConnectionsElementCollection.cs" />
+    <Compile Include="Configuration\Collections\ImportsElementCollection.cs" />
+    <Compile Include="Configuration\Collections\ParametersElementCollection.cs" />
+    <Compile Include="Configuration\Collections\PrivateMethodsElementCollection.cs" />
+    <Compile Include="Configuration\Collections\AttributesElementCollection.cs" />
+    <Compile Include="Configuration\Collections\PublicMethodsElementCollection.cs" />
+    <Compile Include="Configuration\Collections\NameSpacesElementCollection.cs" />
+    <Compile Include="Configuration\Collections\StatementsElementCollection.cs" />
+    <Compile Include="Configuration\ConfigurationKeys.cs" />
+    <Compile Include="Configuration\Elements\BaseElement.cs" />
+    <Compile Include="Configuration\Elements\ConstructorElement.cs" />
+    <Compile Include="Configuration\Elements\ExceptionMethodElement.cs" />
+    <Compile Include="Configuration\Elements\ParameterElement.cs" />
+    <Compile Include="Configuration\Elements\PrivateMethodElement.cs" />
+    <Compile Include="Configuration\Elements\AttributeElement.cs" />
+    <Compile Include="Configuration\Elements\ClassEntityElement.cs" />
+    <Compile Include="Configuration\Elements\ClassMetadataElement.cs" />
+    <Compile Include="Configuration\Elements\ConectionChainElement.cs" />
+    <Compile Include="Configuration\Elements\ConnectionOptionsElement.cs" />
+    <Compile Include="Configuration\Elements\EnumerationsElement.cs" />
+    <Compile Include="Configuration\Elements\GeneratorConnectionElement.cs" />
+    <Compile Include="Configuration\Elements\GeneratorOptionsElement.cs" />
+    <Compile Include="Configuration\Elements\ImportElement.cs" />
+    <Compile Include="Configuration\Elements\NamespaceElement.cs" />
+    <Compile Include="Configuration\Elements\PrivatePropertiesElement.cs" />
+    <Compile Include="Configuration\Elements\PublicMethodElement.cs" />
+    <Compile Include="Configuration\Elements\PublicPropertiesElement.cs" />
+    <Compile Include="Configuration\Elements\StatementElement.cs" />
+    <Compile Include="Configuration\GeneratorObjectsManager.cs" />
+    <Compile Include="Configuration\GeneratorObjectsSection.cs" />
+    <Compile Include="Contracts\Generator.cs" />
+    <Compile Include="Contracts\IGenerator.cs" />
+    <Compile Include="Decorators\EntityGenerator.cs" />
+    <Compile Include="Decorators\GenericRepositoryCollectionGenerator.cs" />
+    <Compile Include="Decorators\GenericRepositoryGenerator.cs" />
+    <Compile Include="Entities\Field.cs" />
+    <Compile Include="Entities\NodeFile.cs" />
+    <Compile Include="Entities\Parameter.cs" />
+    <Compile Include="Entities\Procedure.cs" />
+    <Compile Include="Entities\ReferentialTable.cs" />
+    <Compile Include="Entities\Table.cs" />
+    <Compile Include="Enumerations\DatabaseType.cs" />
+    <Compile Include="Enumerations\DatasetFields.cs" />
+    <Compile Include="Enumerations\GeneratorObjectsError.cs" />
+    <Compile Include="Enumerations\NamespaceType.cs" />
+    <Compile Include="Enumerations\ObjectType.cs" />
+    <Compile Include="Enumerations\OutputCode.cs" />
+    <Compile Include="Enumerations\ParameterFields.cs" />
+    <Compile Include="Enumerations\ProcedureFields.cs" />
+    <Compile Include="Enumerations\TableFields.cs" />
+    <Compile Include="Exceptions\BaseException.cs" />
+    <Compile Include="Exceptions\GeneratorObjectsErrorDescription.cs" />
+    <Compile Include="Exceptions\GeneratorObjectsException.cs" />
+    <Compile Include="Localizacion\CoreMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoreMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localizacion\ExceptionsMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionsMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\CodeDomManager.cs" />
+    <Compile Include="Managers\CodeFileManager.cs" />
+    <Compile Include="Managers\CodeStringManager.cs" />
+    <Compile Include="Managers\SqlManager.cs" />
+    <Compile Include="Managers\SqlSentencesManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GeneratorService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extends\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localizacion\CoreMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoreMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localizacion\ExceptionsMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionsMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
